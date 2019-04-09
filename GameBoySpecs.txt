@@ -1,0 +1,57 @@
+Hard GB specs
+-------------
+
+CPU: 8-Bit (Similar to a Zilog Z80 Processor or Intel 8080)
+Main RAM: 8k Byte ~ 8192 Bits
+Video RAM: 8k Byte ~ 8192 Bits
+Screen Size: 2.6"
+Resolution: 160px * 144px (20px * 18px tiles) ~ 8px * 8px per tile
+Max nr. of sprites: 40
+Max nr. of sprites pr. line: 10
+Max sprite size: 8px * 16px
+Min sprite size: 8px * 8px
+Clock Speed: 4.194304 MHz ~ 4.295454 MHz on SGB ~ 4.194 or 8.388MHz on GBC
+Horizontal Sync: 9198 KHz ~ 9420 KHz on SGB
+Vertical Sync: 59.73 Hz ~ 61.17 Hz on SGB
+Sound: 4 Channels with stereo sound
+Power: DC6V 0.7W ~ DC3V 0.7W on GB Pocket
+
+
+*----------------*--------------*------------------*
+|                | GB CPU Speed | NOP Instructions |
+*----------------*--------------*------------------*
+| Machine Cycles |   1.05MHz    |     1 cycle      |
+*----------------*--------------*------------------*
+|  Clock Cycles  |   4.19MHz    |     4 cycles     |
+*----------------*--------------*------------------*
+
+
+Memory Map
+----------
+
+Interupt Enable Register
+--------------------------------- FFFF
+Internal RAM
+--------------------------------- FF80
+Empty but unusable for I/O
+--------------------------------- FF4C
+I/O ports
+--------------------------------- FF00
+Empty but unusable for I/O
+--------------------------------- FEA0
+Sprite Attrib Memory (0AM)
+--------------------------------- FE00
+Echo of 8kB ~ 8196b Internal RAM
+--------------------------------- E000
+8kB ~ 8196b Interal RAM
+--------------------------------- C000
+8kB ~ 8196b switchable RAM bank
+--------------------------------- A000
+8kB ~ 8196b Video RAM
+--------------------------------- 8000 --
+16kB ~ 16392b switchable ROM bank       |
+--------------------------------- 4000  | = 32 kB Cartrigde
+16kB ~ 16392b ROM bank #0               |
+--------------------------------- 0000 --
+
+* NOTE: b = bit, B = Byte
