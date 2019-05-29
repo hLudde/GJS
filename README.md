@@ -10,3 +10,7 @@ Build the project with `npx webpack`
 Open the `index.html`file located in `dist/index.html`.
 
 **as you can see, there is not alot going on in index.html currently, however the tests are fun to look at i guess...** 😋
+
+# References
+
+this awesome manual that explains the inner workings of the GameBoy http://marc.rawer.de/Gameboy/Docs/GBCPUman.pdf
