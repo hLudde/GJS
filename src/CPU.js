@@ -1,11 +1,14 @@
+var commands = require('./commands');
+
+var flagRegister = 0x00;
+var programCounter = parseInt(process.env.START_POINT);
+
 var A,F = 0x00;
 var B,C = 0x00;
 var D,E = 0x00;
 var H,L = 0x00;
 var SP = 0x0000;
 var PC = 0x0000;
-var flagRegister = 0x00;
-var programCounter = 0x0100;
 
 check8BitValue = (eightBitValue)=>{
     if(eightBitValue>0xFF||eightBitValue<0x00){
@@ -18,6 +21,19 @@ check16BitValue = (sixteenBitValue)=>{
         throw new Error('invalidValueExeption');
     }
     return;
+}
+exports.opcode = (opcode)=>{
+    return commands.opcode(opcode);
+}
+
+exports.increaseCounter = ()=>{
+    programCounter+=0x0001;
+}
+exports.getProgramCounter = ()=>{
+    return programCounter;
+}
+exports.setProgramCounter = (pointer)=>{
+    programCounter=pointer;
 }
 
 exports.setA = (eightBitValue)=>{
