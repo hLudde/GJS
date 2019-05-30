@@ -22,7 +22,12 @@ test('set invalid values', ()=>{
     mem.init();
     expect(()=>{mem.set(0x10000, 0xFF)}).toThrowError('invalidPointerException');
     expect(()=>{mem.set(-0x0001, 0xFF)}).toThrowError('invalidPointerException');
+    expect(()=>{mem.set(0x10000, 0x100)}).toThrowError('invalidPointerException');
+    expect(()=>{mem.set(-0x0001, 0x100)}).toThrowError('invalidPointerException');
+    expect(()=>{mem.set(-0x0001, -0x01)}).toThrowError('invalidPointerException');
     expect(()=>{mem.set(0x00FF, 0x100)}).toThrowError('invalidValueException');
     expect(()=>{mem.set(0xFF00, -0x01)}).toThrowError('invalidValueException');
+    expect(()=>{mem.load(0x10000)}).toThrowError('invalidPointerException');
+    expect(()=>{mem.load(-0x0001)}).toThrowError('invalidPointerException');
     mem.init();
 })

@@ -22,14 +22,14 @@ exports.size = ()=>{
 }
 
 validateValue = (value)=>{
-    if(value<0||value>0xFF){
+    if((value<0||value>0xFF)||value==undefined){
         throw new Error('invalidValueException');
     }
     return true;
 }
 
 validatePointer = (pointer)=>{
-    if(pointer<0||pointer>=memory.length){
+    if((pointer<0||pointer>=memory.length)||pointer==undefined){
         throw new Error('invalidPointerException');
     }
     return true;
