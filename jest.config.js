@@ -3,7 +3,7 @@ require('dotenv').config();
     module.exports = {
         "verbose":true,
         "collectCoverage": true,
-        "coverageReporters": ["text"],
+        "coverageReporters": ["text", "html"],
         "collectCoverageFrom":[
             "./src/*.js",
             "!./src/index.js",
