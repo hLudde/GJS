@@ -100,6 +100,9 @@ exports.getH = ()=>{
 exports.getL = ()=>{
     return L;
 }
+exports.getHL = ()=>{
+    return H<<8|L;
+}
 exports.getSP = ()=>{
     return SP;
 }
