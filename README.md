@@ -23,3 +23,5 @@ Open the `index.html`file located in `dist/index.html`.
 this awesome manual that explains the inner workings of the GameBoy http://marc.rawer.de/Gameboy/Docs/GBCPUman.pdf
 
 on how to read what the opcodes do in the manual above and other relevant information i refer to theese two great sites: https://www.chibiakumas.com/z80/ and http://z80-heaven.wikidot.com
+
+\o.o/
